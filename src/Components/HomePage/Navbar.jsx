@@ -53,9 +53,9 @@ const Navbar = () => (
           <li>
             <a href="#contact">Contact</a>
           </li>
-          <li>
+          {/* <li>
             <a className=" bg-[#97FB57]">Join</a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

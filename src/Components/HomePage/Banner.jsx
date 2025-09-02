@@ -14,7 +14,7 @@ const Banner = () => (
             It doesn't matter if your goal is to get stronger, burn fat, or to just stay fit our world class coaches will guide you every step of the way.
         </p>
 
-        <button className="mt-8 w-36 text-center hidden lg:block btn rounded-full text-sm bg-[#97FB57] py-2 border-none">Join For Grind</button>
+        <button className="mt-8 w-36 text-center  btn rounded-full text-sm bg-[#97FB57] py-2 border-none">Join For Grind</button>
 
         </div>
         
