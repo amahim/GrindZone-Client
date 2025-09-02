@@ -1,4 +1,4 @@
-import About from "./About";
+import Services from "./Services";
 import Banner from "./Banner";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -11,8 +11,8 @@ const Home = () => {
         <div>
         {/* <Navbar /> */}
         <Banner />
-        {/* <About /> */}
-        {/* <Membership /> */}
+        <Services />
+        <Membership />
         {/* <Contact /> */}
         {/* <Footer /> */}
         </div>
