@@ -1,0 +1,35 @@
+#bannerBG {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  height: 100vh;
+  background-image: url("../../assets/banner.jpg"); /* Update path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#bannerBG::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+  z-index: 1;
+}
+
+#bannerBG > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 640px) {
+  #bannerBG {
+    height: 50vh;
+    width: 100vw;
+  }
+}
