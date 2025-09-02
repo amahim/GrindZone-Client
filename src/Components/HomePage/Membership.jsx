@@ -1,4 +1,5 @@
 import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const plans = [
   {
@@ -6,21 +7,12 @@ const plans = [
     price: "৳1500",
     period: "/mo",
     features: ["All classes", "Full gym access", "1 Free diet consultation"],
-    // note: "Charges every month unless you cancel",
   },
-  // {
-  //   title: "Basic Plan",
-  //   price: "৳2000",
-  //   period: "/mo",
-  //   features: ["Gym access", "2 group classes per week", "Locker access"],
-  //   note: "Perfect for beginners just starting out",
-  // },
   {
     title: "3 Month Plan",
     price: "৳2300",
     period: "/3mo",
     features: ["All classes", "Full gym access", "Member-only events"],
-    // note: "Charges every 3 months unless you cancel",
   },
   {
     title: "6 Month Plan",
@@ -32,28 +24,33 @@ const plans = [
       "Member-only events",
       "Free t-shirt & bottle",
     ],
-    // note: "Charges every 6 months unless you cancel",
   },
 ];
 
 const Membership = () => {
   return (
-    <div className=" py-24 px-6 lg:px-20 bg-[#5F7252]" id="membership">
-      <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
+    <div className="py-24 px-6 lg:px-20 bg-[#5F7252]" id="membership">
+      <h2 className="text-3xl lg:text-4xl text-white font-bold text-center mb-12">
         Membership Plans
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {plans.map((plan, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white border rounded-2xl shadow-md p-8 flex flex-col justify-between hover:shadow-lg transition"
+            className="bg-white border rounded-2xl shadow-md p-8 flex flex-col justify-between transition"
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0px 0px 25px rgb(151, 251, 87)",
+              borderColor: "rgb(151, 251, 87)",
+            }}
+            transition={{ type: "spring", stiffness: 200, damping: 1 }}
           >
             {/* Title */}
             <h3 className="text-xl font-bold mb-4 text-center">{plan.title}</h3>
 
             {/* Price */}
-            <p className="text-3xl font-extrabold text-green-700 text-center mb-6">
+            <p className="text-3xl font-extrabold text-[#97FB57] text-center mb-6">
               {plan.price}
               <span className="text-base font-medium text-gray-600">
                 {plan.period}
@@ -70,14 +67,14 @@ const Membership = () => {
               ))}
             </ul>
 
-            {/* Note */}
-            <p className="text-sm text-gray-500 mb-4">{plan.note}</p>
-
             {/* Button */}
-            <button className="bg-black text-white rounded-full py-2 px-4 font-medium hover:bg-green-600 transition">
-              Start 7 day free trial
+            <button
+              className="bg-black text-white rounded-full
+             py-2 px-4 font-medium hover:bg-[#97FB57] hover:text-black transition"
+            >
+              Select Package
             </button>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

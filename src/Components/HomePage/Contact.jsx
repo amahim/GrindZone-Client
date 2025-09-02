@@ -1,35 +1,29 @@
-import React from "react";
+import { FaPhone } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 const Contact = () => (
-  <section id="contact" className="py-12 bg-gray-100 text-center">
-    <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-    <form className="max-w-md mx-auto flex flex-col gap-4">
-      <input
-        type="text"
-        placeholder="Your Name"
-        className="p-2 border rounded"
-        required
-      />
-      <input
-        type="email"
-        placeholder="Your Email"
-        className="p-2 border rounded"
-        required
-      />
-      <textarea
-        placeholder="Your Message"
-        className="p-2 border rounded"
-        rows="4"
-        required
-      ></textarea>
-      <button
-        type="submit"
-        className="bg-blue-600 text-white px-6 py-2 rounded font-semibold hover:bg-blue-700"
-      >
-        Send Message
-      </button>
-    </form>
-  </section>
+  <div className="fab">
+    {/* Main FAB button */}
+    <div
+      tabIndex={0}
+      role="button"
+      className="btn btn-lg btn-circle bg-[#97FB57] border-none shadow-2xl"
+    >
+      <FaPhone />
+    </div>
+
+    {/* Close FAB */}
+    <div className="fab-close">
+      <span className="btn btn-circle border-none shadow-2xl btn-lg btn-error">
+        <IoClose className="text-2xl font-extrabold" />
+      </span>
+    </div>
+
+    {/* Phone button with auto call */}
+    <a href="tel:+8801869610686" className="btn ">
+      +880 1869610686
+    </a>
+  </div>
 );
 
 export default Contact;

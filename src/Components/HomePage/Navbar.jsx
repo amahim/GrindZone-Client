@@ -15,9 +15,9 @@ const Navbar = () => (
         <li>
           <a href="#services">Services</a>
         </li>
-        <li>
+        {/* <li>
           <a href="#contact">Contact</a>
-        </li>
+        </li> */}
       </ul>
       
       {/* Mobile dropdown */}
@@ -50,9 +50,9 @@ const Navbar = () => (
           <li>
             <a href="#services">Services</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#contact">Contact</a>
-          </li>
+          </li> */}
           {/* <li>
             <a className=" bg-[#97FB57]">Join</a>
           </li> */}
