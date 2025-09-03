@@ -7,7 +7,9 @@ import { Toaster } from "react-hot-toast";
 // import AuthProvider from "./Components/Provider/AuthProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./Components/HomePage/Home.jsx";
-import Error from "./Components/Shared/Error.jsx";
+// import Error from "./Components/Shared/Error.jsx";
+// import { path } from "framer-motion/client";
+import AllEquipments from "./Components/HomePage/AllEquipments.jsx";
 
 const queryClient = new QueryClient();
 
@@ -16,8 +18,13 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
     errorElement: <Error />,
-    children: [],
+    children: [
+      
+    ],
   },
+  {
+      path: "/all-equipments",
+       element: <AllEquipments /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

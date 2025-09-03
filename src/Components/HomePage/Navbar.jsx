@@ -15,9 +15,9 @@ const Navbar = () => (
         <li>
           <a href="#services">Services</a>
         </li>
-        {/* <li>
-          <a href="#contact">Contact</a>
-        </li> */}
+        <li>
+          <a href="#equipments">Equipments</a>
+        </li>
       </ul>
       
       {/* Mobile dropdown */}

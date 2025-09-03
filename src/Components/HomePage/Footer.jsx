@@ -1,7 +1,7 @@
 import Logo from "../../assets/Logo.png";
 
 const Footer = () => (
-  <footer className="bg-[#121212] footer footer-horizontal footer-center text-primary-content p-10">
+  <footer className=" bg-[#5F7252] footer footer-horizontal footer-center text-primary-content p-10">
   <aside>
     <img src={Logo} className="w-24 h-24 lg:h-36 lg:w-36"/>
     <p className="font-bold">
